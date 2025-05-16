@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+} a{
+    display: block;
+    text-decoration: none;
+    padding: 10px;
+    color: black;
+} 
+body{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+.sideBar{
+    padding: 10px;
+    grid-column: 1/2;
+    background-color: pink;
+}
+.content{
+    padding: 10px;
+    grid-column: 2/6;
+    background-color: burlywood;
+}
+.selected{
+    width: 100%;
+    background-color: black;
+    color: white;
+    font-weight: bolder;
+}
+table{
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+th, td{
+    padding: 5px 20px ;
+    text-align: center;
+    border-collapse: collapse;
+    border: 1px solid black;
+}
