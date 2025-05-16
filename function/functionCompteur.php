@@ -5,6 +5,7 @@
         incrementCompteur($fichier);
         incrementCompteur($fichierJournalier);
     }
+    
     function incrementCompteur(string $fichierToIncrement) : void{
         $compteur = 1;
         if(file_exists($fichierToIncrement)){

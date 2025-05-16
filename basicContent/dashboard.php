@@ -1,8 +1,9 @@
 <?php 
-require_once dirname(__DIR__).DIRECTORY_SEPARATOR.'function'.DIRECTORY_SEPARATOR.'functionCompteur.php';
-ajouter_vue();
-$date = (int)date('Y');
-$selectedYear = empty($_GET['year']) ? $date : (int)$_GET['year'];
+    require_once dirname(__DIR__).DIRECTORY_SEPARATOR.'function'.DIRECTORY_SEPARATOR.'auth.php';
+    force_user_connect();
+    ajouter_vue();
+    $date = (int)date('Y');
+    $selectedYear = empty($_GET['year']) ? $date : (int)$_GET['year'];
 ?>
 <div class="sideBar"> 
         <div>
@@ -12,8 +13,7 @@ $selectedYear = empty($_GET['year']) ? $date : (int)$_GET['year'];
         </div>
 </div>
 <div class="content">
-    <p>
-        <?php
+    <?php
         $vues = showData();
         if(isset($vues)):?>
         <table>
@@ -28,6 +28,6 @@ $selectedYear = empty($_GET['year']) ? $date : (int)$_GET['year'];
             </tr>
             <?php endforeach?>
         </table>
-        <?php endif; ?>
-    </p>
+    <?php endif; ?>
+    <a href="logout.php">Se déconnecter</a>
 </div>

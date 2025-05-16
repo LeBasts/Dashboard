@@ -1,24 +1,26 @@
 *{
     margin: 0;
+    font:  1.2rem "Fira Sans", sans-serif;
 } a{
+    text-indent: 10%;
+    padding-block: 10px;
     display: block;
     text-decoration: none;
-    padding: 10px;
     color: black;
 } 
 body{
     display: grid;
     grid-template-columns: repeat(5, 1fr);
+    background-color: burlywood;
 }
 .sideBar{
-    padding: 10px;
     grid-column: 1/2;
     background-color: pink;
 }
 .content{
-    padding: 10px;
+    margin-inline: auto;
+    text-align: center;
     grid-column: 2/6;
-    background-color: burlywood;
 }
 .selected{
     width: 100%;
@@ -27,6 +29,7 @@ body{
     font-weight: bolder;
 }
 table{
+    width: 100%;
     margin-top: 20px;
     border-collapse: collapse;
 }
@@ -35,4 +38,25 @@ th, td{
     text-align: center;
     border-collapse: collapse;
     border: 1px solid black;
+}
+form{
+    grid-column: 3/4;
+    grid-row: 2/3;
+}
+input {
+    text-align: center;
+    width: 100%;
+    padding-block: 20px;
+    margin-block: 30px;
+}
+button{
+    display: block;
+    padding: 20px;
+    margin: auto;
+}
+.h1{
+    background-color: black;
+    color: white;
+    text-align: center;
+    grid-column: 1/-1;
 }
