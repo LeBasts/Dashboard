@@ -1,12 +1,11 @@
 <?php
-    function isConnected():bool{
+    function isConnected():void{
+        // Si la session n'est pas lancé on la lance
         if(session_status() === PHP_SESSION_NONE){
             session_start();
         }
-        return !empty($_SESSION['connected']);
-    }
-    function force_user_connect():void{
-        if (!isConnected()){
+        // Si session connected n'est pas renseigné alors on renvoie sur la page de connexion
+        if(empty($_SESSION['connected'])){
             header('Location: connect.php');
             exit();
         }
