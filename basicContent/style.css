@@ -60,3 +60,6 @@ button{
     text-align: center;
     grid-column: 1/-1;
 }
+p {
+    text-align: center;
+}

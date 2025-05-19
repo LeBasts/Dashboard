@@ -4,10 +4,12 @@
     require('header.php');
     // Set error sur null
     $error = null;
+    // Signature de mot de passe
+    $password = '$2y$12$.wAvgXXhB/P5sBT.0ScmVeOJcdQlvBOWM71iAcW4vzON1YCA9ut92';
     //Si il y a des valeurs dans post name et mdp
     if(!empty($_POST['name']) && !empty($_POST['mdp'])){
-        // Si ces valeurs sont = aux mdp et noms bast et 0000
-        if($_POST['name'] === 'bast' && $_POST['mdp'] === "0000"){
+        // Si ces valeurs sont = aux mdp et noms user et 0000
+        if(htmlspecialchars($_POST['name']) === 'user' && password_verify(htmlspecialchars($_POST['mdp']), $password)){
             // On démarre la session et met connected = 1 dedans
             session_start();
             $_SESSION['connected'] = 1;
@@ -19,13 +21,16 @@
         }
     }
     // Si il y a une erreur l'affiche
-    if($error){
-        echo $error;
-    }
+    
 ?>
 <form action="" method="post">
-    <input type="text" placeholder="Identifiant" name="name">
-    <input type="password" placeholder="Mots de passe" name="mdp">
+    <input type="text" placeholder="Identifiant (user)" name="name">
+    <input type="password" placeholder="Mots de passe (0000)" name="mdp">
+    <?php 
+    if($error){
+        echo "<p>".$error."</p>";
+    }
+    ?>
     <button type="submit">Se connecter</button>
 </form>
 <?php require('footer.php'); ?>
