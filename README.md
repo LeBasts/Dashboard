@@ -25,3 +25,5 @@ Ce projet m’a permis d’apprendre et de mettre en pratique les bases de PHP, 
 - PHP (fonctions natives, manipulation de fichiers)
 - HTML
 - CSS (minimal)
+
+## 🚀 Visible sur [antoinebastelica.fr]([https://antoinebastelica.fr/Projets/Calculette/calc.html](https://antoinebastelica.fr/Projets/Dashboard/basicContent/connect.php))
