@@ -27,5 +27,3 @@ Ce projet m’a permis d’apprendre et de mettre en pratique les bases de PHP, 
 - CSS (minimal)
 
 ## 🚀 Visible sur [antoinebastelica.fr](https://antoinebastelica.fr/Projets/Dashboard/basicContent/connect.php)
-
-[antoinebastelica.fr](https://antoinebastelica.fr/Projets/Dashboard/basicContent/connect.php)
