@@ -20,13 +20,13 @@
             $error = "Identifiants incorrects";
         }
     }
-    // Si il y a une erreur l'affiche
     
-?>
+    ?>
 <form action="" method="post">
     <input type="text" placeholder="Identifiant (user)" name="name">
     <input type="password" placeholder="Mots de passe (0000)" name="mdp">
     <?php 
+    // Si il y a une erreur l'affiche
     if($error){
         echo "<p>".$error."</p>";
     }

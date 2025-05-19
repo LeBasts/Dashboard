@@ -6,7 +6,7 @@
         }
         // Si session connected n'est pas renseigné alors on renvoie sur la page de connexion
         if(empty($_SESSION['connected'])){
-            header('Location: connect.php');
+            header('Location: basicContent\connect.php');
             exit();
         }
     }
